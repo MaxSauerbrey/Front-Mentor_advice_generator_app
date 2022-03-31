@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
+
+    <title>Frontend Mentor | Advice generator app</title>
+
+</head>
+
+<body>
+    <main class="card">
+        <!-- Advice ID goes here -->
+        <h1 class="card__title">Advice <span class="card__advice-id">#117</span></h1>
+        <!-- Advice text goes here -->
+        <p class="card__advice">"It is easy to sit up and take notice, what's difficult is getting up and taking action"</p>
+        <picture>
+            <source srcset="images/pattern-divider-desktop.svg" media="(min-width:750px)" class="card__divider--desktop">
+            <img src="images/pattern-divider-mobile.svg" class="card__divider" alt="divider">
+        </picture>
+
+        <button class="card__button">
+            <img class="card__dice-button" src="images/icon-dice.svg" alt="dice-button">
+        </button>
+    </main>
+
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Max Sauerbrey</a>.
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="js/script.js"></script>
+
+</html>
