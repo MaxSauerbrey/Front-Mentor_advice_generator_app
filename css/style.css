@@ -248,5 +248,42 @@ picture {
     transform: scale(0.5);
   }
 }
+@media only screen and (min-width: 750px) {
+  body {
+    display: flex;
+    padding: 0;
+    justify-content: space-evenly;
+  }
+
+  .card {
+    padding: 0 2.8125rem 0 2.8125rem;
+    max-width: 33.75rem;
+    align-self: center;
+    top: 7rem;
+    border-radius: 0.9375rem;
+  }
+  .card__title {
+    font-size: 0.9375rem;
+    letter-spacing: 0.1875rem;
+  }
+  .card__advice {
+    position: relative;
+    font-size: 1.75rem;
+    margin: 1.4375rem 0 1.75rem;
+    padding: 0;
+    text-align: center;
+  }
+  .card__button {
+    top: 2.1rem;
+  }
+  .card__divider {
+    margin-top: 0;
+  }
+
+  .attribution {
+    position: relative;
+    top: 5.5rem;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
