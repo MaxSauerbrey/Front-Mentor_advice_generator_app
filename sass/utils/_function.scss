@@ -1,0 +1,31 @@
+    @use 'sass:math';
+    @import 'variables.scss';
+    //! Pixels to rems converter
+    @function pixelsToRems ($pixels) {
+        $unit: math.div($pixels, 1px);
+        $result: math.div($unit, 16);
+        @return $result * 1rem;
+    }
+    
+    //! Rems to pixels converter
+    @function remsToPixels ($rems) {
+        $unit: math.div($rems, 1rem);
+        $result: $unit *16px;
+        @return $result;
+    }
+    
+    //! Pixels to ems converter
+    @function pixelsToEms ($pixels) {
+        $unit: math.div($pixels, 1px);
+        $general-font-size: math.div($general-font-size, 1px);
+        $result: math.div($unit, $general-font-size);
+        @return $result * 1em;
+    }
+    
+    //! Ems to pixels converter
+    @function emsToPixels ($ems) {
+        $unit: math.div($ems, 1em);
+        $general-font-size: math.div($general-font-size, 1px);
+        $result: math.div($unit, $general-font-size);
+        @return $result * 1px;
+    }

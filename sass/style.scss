@@ -1,0 +1,233 @@
+                @use "sass:map";
+                @use "sass:list";
+                @import "base/reset.scss";
+                @import "base/typography.scss";
+                @import "utils/variables.scss";
+                @import "utils/function.scss";
+                @import "layout/main.scss";
+                /*root */
+                
+                 :root {
+                    #{$selector_1}: $lightCyan;
+                    #{$selector_2}: $neonGreen;
+                    #{$selector_3}: $grayishBlue;
+                    #{$selector_4}: $darkGrayishBlue;
+                    #{$selector_4}: $darkBlue;
+                }
+                
+                html {
+                    width: 100%;
+                    -webkit-animation: fadein 2s;
+                    /* Safari, Chrome and Opera > 12.1 */
+                    -moz-animation: fadein 2s;
+                    /* Firefox < 16 */
+                    -ms-animation: fadein 2s;
+                    /* Internet Explorer */
+                    -o-animation: fadein 2s;
+                    /* Opera < 12.1 */
+                    animation: fadein 2s;
+                }
+                
+                body {
+                    min-height: 100vh;
+                    font-family: $font-base;
+                    padding: pixelsToRems(70px) pixelsToRems(17px);
+                    background-color: $darkBlue;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    // overflow-y: hidden;
+                }
+                
+                .card {
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    padding: 0 pixelesToRems(15px) pixelesToRems(55px) pixelesToRems(15px);
+                    border-radius: pixelsToRems(10px);
+                    background-color: $darkGrayishBlue;
+                    max-width: pixelsToRems(341px);
+                    animation: fadeIn 2s;
+                    opacity: 1;
+                    z-index: 20;
+                    &__title {
+                        font-size: pixelsToRems(12px);
+                        color: $neonGreen;
+                        letter-spacing: pixelsToRems(4px);
+                        margin-top: pixelsToRems(48px);
+                        text-align: center;
+                        text-transform: uppercase;
+                    }
+                    &__divider {
+                        margin: pixelsToRems(25px) pixelsToRems(8px) pixelsToRems(15px);
+                        position: relative;
+                        top: 1rem;
+                    }
+                    &__button {
+                        display: block;
+                        align-self: center;
+                        position: relative;
+                        top: 2rem;
+                        background-color: $neonGreen;
+                        padding: 1.2rem;
+                        border-radius: 50%;
+                        border: thin solid transparent;
+                        cursor: pointer;
+                        &:hover {
+                            box-shadow: 0 0 2rem $neonGreen;
+                        }
+                    }
+                    &__advice {
+                        font-size: pixelsToRems(24px);
+                        margin-top: pixelsToRems(23px);
+                        padding: 0 pixelsToRems(15px);
+                        text-align: center;
+                        color: $lightCyan;
+                    }
+                    &__button {
+                        & .card__dice-button {
+                            animation: dice-effect 0.5s ease-in 0s 1 reverse;
+                        }
+                    }
+                    &__button:hover {
+                        & .card__dice-button {
+                            animation: dice-rotation 0.5s ease-in 0s 1 reverse;
+                        }
+                    }
+                }
+                
+                picture {
+                    display: flex;
+                    justify-content: center;
+                }
+                
+                .attribution {
+                    font-size: pixelsToRems(10px);
+                    justify-content: center;
+                    align-items: flex-end;
+                    margin-top: 8rem;
+                    position: relative;
+                    height: auto;
+                    width: 99%;
+                    top: 6rem;
+                    line-height: 10px;
+                    text-align: center;
+                    color: $lightCyan;
+                    & a {
+                        color: $neonGreen;
+                    }
+                }
+                
+                @keyframes fadein {
+                    from {
+                        opacity: 0;
+                    }
+                    to {
+                        opacity: 1;
+                    }
+                }
+                /* Firefox < 16 */
+                
+                @-moz-keyframes fadein {
+                    from {
+                        opacity: 0;
+                        transform: translateX(50%), translateY(50%);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateX(0%), translateY(0%);
+                    }
+                }
+                /* Safari, Chrome and Opera > 12.1 */
+                
+                @-webkit-keyframes fadein {
+                    from {
+                        opacity: 0;
+                    }
+                    to {
+                        opacity: 1;
+                    }
+                }
+                /* Internet Explorer */
+                
+                @-ms-keyframes fadein {
+                    from {
+                        opacity: 0;
+                    }
+                    to {
+                        opacity: 1;
+                    }
+                }
+                /* Opera < 12.1 */
+                
+                @-o-keyframes fadein {
+                    from {
+                        opacity: 0;
+                    }
+                    to {
+                        opacity: 1;
+                    }
+                }
+                
+                @keyframes dice-rotation {
+                    from {
+                        rotate: (0deg);
+                        transform: translateX(0%), translateY(0%);
+                        transform: scale(1);
+                    }
+                    to {
+                        rotate: (-360deg);
+                        transform: translateX(-50%), translateY(50%);
+                        transform: scale(0.50);
+                    }
+                }
+                
+                @keyframes dice-effect {
+                    from {
+                        rotate: (-360deg);
+                        transform: translateX(-50%), translateY(50%);
+                        transform: scale(1);
+                    }
+                    to {
+                        rotate: (0deg);
+                        transform: translateX(0%), translateY(0%);
+                        transform: scale(0.50);
+                    }
+                }
+                
+                @media only screen and (min-width:750px) {
+                    body {
+                        display: flex;
+                        padding: 0;
+                        justify-content: space-evenly;
+                    }
+                    .card {
+                        padding: 0 pixelsToRems(45px) 0 pixelsToRems(45px);
+                        max-width: pixelsToRems(540px);
+                        align-self: center;
+                        top: 7rem;
+                        border-radius: pixelsToRems(15px);
+                        &__title {
+                            font-size: pixelsToRems(15px);
+                            letter-spacing: pixelsToRems(3px);
+                        }
+                        &__advice {
+                            position: relative;
+                            font-size: pixelsToRems(28px);
+                            margin: pixelsToRems(23px) 0 pixelsToRems(28px);
+                            padding: 0;
+                            text-align: center;
+                        }
+                        &__button {
+                            top: 2.1rem
+                        }
+                        &__divider {
+                            margin-top: 0;
+                        }
+                    }
+                    .attribution {
+                        position: relative;
+                        top: 5.5rem;
+                    }
+                }

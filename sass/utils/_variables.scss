@@ -1,0 +1,18 @@
+//!Colours //
+///Primary //
+$lightCyan:hsl(193, 38%, 86%);
+$neonGreen:hsl(150, 100%, 66%);
+/// Neutral ///
+$grayishBlue: hsl(217, 19%, 38%);
+$darkGrayishBlue: hsl(217, 19%, 24%);
+$darkBlue:hsl(218, 23%, 16%);
+//! Selector colors */
+$selector_1: '--lightCyan';
+$selector_2: '--neonGreen';
+$selector_3: '--grayishBlue';
+$selector_4: '--darkGrayishBlue';
+$selector_5: '--darkBlue';
+//! Font size
+$font-base: 'Manrope',
+sans-serif;
+$general-font-size:16px;
