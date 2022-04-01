@@ -14,7 +14,7 @@ async function getData() {
         // console.log(json);
 
         $quoteId.innerHTML = `#${json.slip.id}`
-        $quote.innerHTML = `${json.slip.advice}`
+        $quote.innerHTML = `“${json.slip.advice}”`
         $quoteId.appendChild($quoteId)
     } catch (err) {
         let message = err.response.statusText || "Ocurrio un error";
