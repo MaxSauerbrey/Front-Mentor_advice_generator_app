@@ -206,24 +206,31 @@
                         padding: 0 pixelsToRems(45px) 0 pixelsToRems(45px);
                         max-width: pixelsToRems(540px);
                         align-self: center;
-                        top: 7rem;
+                        top: 6.9rem;
                         border-radius: pixelsToRems(15px);
                         &__title {
-                            font-size: pixelsToRems(15px);
-                            letter-spacing: pixelsToRems(3px);
+                            font-size: pixelsToRems(14px);
+                            letter-spacing: pixelsToRems(3.5px);
+                            position: relative;
+                            bottom: 0.1rem;
+                            left: 0.1rem;
                         }
                         &__advice {
                             position: relative;
+                            letter-spacing: pixelsToRems(-0.3px);
                             font-size: pixelsToRems(28px);
                             margin: pixelsToRems(23px) 0 pixelsToRems(28px);
                             padding: 0;
                             text-align: center;
                         }
                         &__button {
-                            top: 2.1rem
+                            top: 2.13rem
                         }
                         &__divider {
                             margin-top: 0;
+                            position: relative;
+                            top: 0.7rem;
+                            // border: 1px solid red;
                         }
                     }
                     .attribution {
